@@ -1,0 +1,36 @@
+app:
+  title: "Medical Assistant Bot"
+  icon: "🏥"
+  layout: "wide"
+  sidebar_state: "expanded"
+  
+  about_text: |
+    This medical assistant bot can help answer your health-related questions.
+    
+    **Please Note:**
+    - This is an AI assistant and not a replacement for professional medical advice
+
+  welcome_message: |
+    Welcome! I'm here to help answer your medical questions using verified medical knowledge.
+    Please note that my responses are for informational purposes only and should not replace professional medical advice.
+  
+  input_placeholder: "Example: What are the common symptoms of diabetes?"
+  
+  footer_text: |
+    <div style='text-align: center'>
+    <p><strong>Disclaimer:</strong> This AI assistant provides general information only. 
+    Always consult qualified healthcare professionals for medical advice.</p>
+    </div>
+
+model:
+  name: "Medical Assistant Bot v1.0"
+  response_temperature: 0.7
+  max_response_length: 150
+  
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+feedback:
+  storage_type: "csv"
+  file_path: "data/feedback/user_feedback.csv"
