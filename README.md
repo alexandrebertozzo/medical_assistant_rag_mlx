@@ -43,11 +43,7 @@ graph TD
    - Embedding generation and caching
    - Train/test split management
 
-## Performance Metrics
-
-### Generation Metrics (N=300)
-# Metrics Selection Rationale
-
+### Performance Metrics
 ## Generation Metrics
 
 - **BLEU (0.2249)**: Selected for evaluating word-level precision, because for medical terminology accuracy where exact term matches matter;
@@ -70,6 +66,38 @@ graph TD
 
 ## Implementation Statement
 This system was developed using standard libraries and documentation, without assistance from third-party AI systems (OpenAI, Claude, etc.). The implementation relies on established methodologies in medical QA systems and NLP evaluation metrics.
+
+## Dataset
+
+### Download Instructions
+
+1. **Dataset Files**
+The processed dataset files can be downloaded from Google Drive:
+[Download Medical QA Dataset](https://drive.google.com/drive/folders/1eudTvOwqBvgisOE9I1oaJivV5Gu22fqj?usp=sharing) 
+
+The dataset includes:
+- `cleaned_data.csv`
+- `embedding_data.csv`
+- `test_set.csv`
+- `train_set.csv`
+- `embeddings.npy`
+
+2. **Setup Instructions**
+```bash
+# Create data directories
+mkdir -p data/raw data/processed
+
+# Download and extract the files to appropriate directories:
+data/
+├── raw/
+│   └── intern_screening_dataset.csv
+└── processed/
+    ├── cleaned_data.csv
+    ├── embedding_data.csv
+    ├── test_set.csv
+    ├── train_set.csv
+    └── embeddings.npy
+```
 
 ## Installation & Setup
 
@@ -138,3 +166,12 @@ python scripts/run_evaluation.py --sample-size 300 #Or any <3282 (training test 
    - Add cross-validation for metrics
    - Implement a Reranker
    - Add a more powerful/domain-related model to use as a Judge for the answers.
+  
+## Acknowledgments
+- Cutabazi,E.;Ni,J.;Tang, G.; Cao, W. A Review on Medical Textual Question Answering Systems Based on Deep Learning Approaches. Appl. Sci. 2021, 11, 5456. https://doi.org/10.3390/ app11125456
+- Asma Ben Abacha, Pierre Zweigenbaum,MEANS: A medical question-answering system combining NLP techniques and semantic Web technologies, Information Processing & Management, Volume 51, Issue 5,2015, Pages 570-594, ISSN 0306-4573, https://doi.org/10.1016/j.ipm.2015.04.006.
+- T. Dodiya and S. Jain, "Question classification for medical domain Question Answering system," 2016 IEEE International WIE Conference on Electrical and Computer Engineering (WIECON-ECE), Pune, India, 2016, pp. 204-207, doi: 10.1109/WIECON-ECE.2016.8009118.
+- Jacquemart, Pierre, and Pierre Zweigenbaum. "Towards a medical question-answering system: a feasibility study." The New Navigators: From Professionals to Patients. IOS Press, 2003. 463-468.
+- Mrini, Khalil, et al. "Medical Question Understanding and Answering with Knowledge Grounding and Semantic Self-Supervision." arXiv preprint arXiv:2209.15301 (2022).
+- https://github.com/AhmedAbouzaid1/Medical-Question-Answering-System 
+- https://huggingface.co/mlx-community 
