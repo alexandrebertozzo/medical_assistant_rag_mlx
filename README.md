@@ -2,6 +2,10 @@
 
 A medical assistant bot for question-answering system that combines Retrieval-Augmented Generation (RAG) with MLX optimization for Apple Silicon, providing accurate and context-aware medical information.
 
+## Project Resources
+- [Read the Paper](https://drive.google.com/file/d/1UL9Yzk3dXhXI95QuQxZiHvk0pqwyRtFM/view?usp=sharing)
+- [View the Slides](https://drive.google.com/file/d/13YReCB1WNZGuaAVeBjdvQjp1aeUDSlrX/view?usp=sharing)
+
 ## Project Overview
 
 This system leverages state-of-the-art natural language processing techniques to provide accurate medical information by:
@@ -103,7 +107,7 @@ data/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone <https://github.com/alexandrebertozzo/medical assistant rag mlx/>
 cd medical_qa_system
 ```
 
